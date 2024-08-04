@@ -16,7 +16,7 @@ void main() {
 	int *vec=(int*)malloc(n*sizeof(int));
 	int *res=(int*)malloc(n*sizeof(int));
 	omp_set_num_threads(n);
-	#pragma omp parallel private(j)
+	#pragma omp parallel private(j) //okay
 	{
 		#pragma omp for
 		for (i=0;i<n;i++) {
